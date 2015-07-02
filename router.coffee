@@ -13,8 +13,8 @@ Router =
       callback(params, queryParams, hash)
       # next()
 
-  go: (path) ->
-    page(path)
+  go: (path) -> page(path)
+  back: -> page.back()
 
 Meteor.startup ->
   page({decodeURLComponents: true})
