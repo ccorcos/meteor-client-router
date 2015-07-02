@@ -1,0 +1,18 @@
+<body>
+  {{>main}}
+</body>
+
+<template name="main">
+  <button>Go Home with JS</button>
+  <ul>
+    <li><a href="/">/</a></li>
+    <li><a href="/profile">/profile</a></li>
+    <li><a href="/profile/10">/profile/10</a></li>
+    <li><a href="/profile/11?q=hello">/profile/11?q=hello</a></li>
+    <li><a href="/profile/11?q=world">/profile/11?q=world</a></li>
+    <li><a href="/profile/11/#sort">/profile/11/#sort</a></li>
+    <li><a href="/profiasdf">not found</a></li>
+  </ul>
+  <hr>
+  {{result}}
+</template>
