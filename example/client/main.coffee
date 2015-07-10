@@ -1,20 +1,20 @@
 Session.set("result", null)
 
-Router.route '/', (params, queryParams, hash) ->
-  console.log "home"
-  Session.set("result", "home")
+Router.route '/', (obj) ->
+  console.log "home", JSON.stringify(obj)
+  Session.set("result", "home #{JSON.stringify(obj)}")
 
-Router.route '/profile/', (params, queryParams, hash) ->
-  console.log "profile"
-  Session.set("result", "profile")
+Router.route '/profile/', (obj) ->
+  console.log "profile", JSON.stringify(obj)
+  Session.set("result", "profile @JSON.stringify(obj)")
 
-Router.route '/profile/:id', (params, queryParams, hash) ->
-  console.log "profile id:", params.id, "query:", queryParams, "hash:", hash
-  Session.set("result", "profile id: #{params.id} query: #{JSON.stringify(queryParams)}, hash: #{hash}")
+Router.route '/profile/:id', (obj) ->
+  console.log "profile ", JSON.stringify(obj)
+  Session.set("result", "profile #{JSON.stringify(obj)}")
 
-Router.route '*', (params, queryParams, hash) ->
-  console.log "not found"
-  Session.set("result", "not found")
+Router.route '*', (obj) ->
+  console.log "not found", JSON.stringify(obj)
+  Session.set("result", "not found @JSON.stringify(obj)")
 
 
 Template.main.helpers

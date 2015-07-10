@@ -5,15 +5,13 @@
 # and we need a 404 warning for route not found
 
 Router = 
-  route: (path, callback) ->
-    page path, (context, next) ->
+  route: (name, callback) ->
+    page name, (context, next) ->
       queryParams = qs.parse(context.querystring)
-      params = context.params
-      hash = context.hash
-      callback(params, queryParams, hash)
-      # next()
-
+      {params, hash, path} = context
+      callback({params, queryParams, hash, name, path})
   go: (path) -> page(path)
+  redirect: (path) -> page.redirect(path)
   back: -> page.back()
 
 Meteor.startup ->

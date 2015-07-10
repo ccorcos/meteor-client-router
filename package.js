@@ -1,7 +1,7 @@
 Package.describe({
   name: 'ccorcos:client-router',
   summary: 'A very simple router for a Meteor client',
-  version: '0.0.1',
+  version: '0.0.3',
   git: 'https://github.com/ccorcos/meteor-client-router'
 });
 

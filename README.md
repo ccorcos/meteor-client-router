@@ -8,10 +8,10 @@ This is a very simple router for Meteor clients. I didn't want a router that doe
 
 Define some routes:
 
-#### `Router.route(pattern, callback)`
+#### `Router.route(name, callback)`
 
-Pattern describes the route using [page.js](https://www.npmjs.com/package/page) pattern syntax.
-The callback function has 3 arguments, `params`, `queryParams` and `hash`. 
+Name describes the route using [page.js](https://www.npmjs.com/package/page) pattern syntax.
+The callback function an object with `{params, queryParams, hash, name, path}`.
 
 #### `Router.go(path)`
 
