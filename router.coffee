@@ -4,7 +4,7 @@
 # first page needs to fire
 # and we need a 404 warning for route not found
 
-Router = 
+Router =
   route: (name, callback) ->
     page name, (context, next) ->
       queryParams = qs.parse(context.querystring)

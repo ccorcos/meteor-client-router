@@ -1,7 +1,7 @@
 Package.describe({
   name: 'ccorcos:client-router',
   summary: 'A very simple router for a Meteor client',
-  version: '0.0.3',
+  version: '0.0.4',
   git: 'https://github.com/ccorcos/meteor-client-router'
 });
 
@@ -16,7 +16,7 @@ Package.onUse(function(api) {
   api.use('coffeescript', 'client');
   api.use('cosmos:browserify@0.3.0', 'client');
 
-  api.addFiles('client.browserify.js', 'client');  
+  api.addFiles('client.browserify.js', 'client');
   api.addFiles('router.coffee', 'client');
 
   api.export('Router');
